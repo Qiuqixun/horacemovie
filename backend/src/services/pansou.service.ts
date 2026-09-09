@@ -81,7 +81,7 @@ export class PansouService {
                     const separator = url.includes('?') ? '&' : '?';
                     return `${url}${separator}${key}=${encodeURIComponent(password)}`;
                 };
-                if (dƒata.merged_by_type && typeof data.merged_by_type === 'object') {
+                if (data.merged_by_type && typeof data.merged_by_type === 'object') {
                     // Flatten the object: { "115": [], "quark": [] } -> [] with type preserved
                     Object.entries(data.merged_by_type).forEach(([type, val]: [string, any]) => {
                         if (Array.isArray(val)) {
